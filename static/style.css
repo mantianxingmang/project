@@ -56,7 +56,7 @@ nav li a:hover{
 .float-right{
     float: right;
 }
-.vnaidu{
+.vbaidu{
     font-size: 12px;
     font-weight: bolder;
     color: black;
@@ -64,4 +64,13 @@ nav li a:hover{
     background-origin: #f5c518;
     border-radius: 5px;
     padding: 5px 5px;
+}
+.alert{
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    border-color: aqua;
+    background: #f5c518;
+    border-radius: 5px;
 }
