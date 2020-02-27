@@ -44,7 +44,7 @@ nav li {
     float: left;
 }
 nav li a{
-    display: block;
+    display: inline-block;
     color: white;
     text-align: center;
     padding: 10px 12px;
