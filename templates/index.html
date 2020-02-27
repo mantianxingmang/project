@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ url_for('static',filename='01.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
-    <title>{{ name }}的电影列表</title>
+    <title>{{ user.name }}的电影列表</title>
 </head>
 <body>
     <h2>
         <img class='avatar' src="{{ url_for('static',filename='images/666.jpg') }}" alt="头像">
-        {{ name }}的电影列表
+        {{ user.name }}的电影列表
     </h2>
     {# length过滤获取movies变量长度 #}
     <p>{{ movies|length }}</p>
