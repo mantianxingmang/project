@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ url_for('static',filename='01.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
-    <title>{{ user.name }}的电影列表</title>
-</head>
-<body>
-    <h2>
-        <img class='avatar' src="{{ url_for('static',filename='images/666.jpg') }}" alt="头像">
-        {{ user.name }}的电影列表
-    </h2>
-    {# length过滤获取movies变量长度 #}
-    <p>{{ movies|length }}</p>
-    <ul class='movie-list'>
-        {% for movie in movies %}
-        <li>{{ movie.title }} —— {{ movie.year }}</li>
-        {% endfor %}
-    </ul>
-    <img class="manhua" src="{{ url_for('static',filename='images/002.jpg') }}" alt="漫画">
-    <footer>&copy;<a href="http://www.baidu.com">百度</a></footer>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+{# length过滤获取movies变量长度 #}
+<p>{{ movies|length }}</p>
+<ul class='movie-list'>
+    {% for movie in movies %}
+    <li>
+        {{ movie.title }} —— {{ movie.year }}
+        <span class="float-right">
+            <a href="http://v.baidu.com/v?word={{ movie.title }}&ct=301989888&rn=67&pn=0&db=0&s=0&fbl=800&ie=utf-8&oq=nnkd&f=3&rsp=0" class="vbaidu" href="" target="_blank" title="百度视频中搜索">百度视频</a>
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+<img class="manhua" src="{{ url_for('static',filename='images/002.jpg') }}" alt="漫画">
+{% endblock %}
