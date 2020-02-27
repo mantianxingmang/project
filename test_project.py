@@ -1,8 +1,9 @@
 import unittest
 
-from app import app,db,User,Movie
+from blog import app,db
+from blog.models import User,Movie
 
-class WatchlistTestCase(unittest.TestCase):
+class ProjectTestCase(unittest.TestCase):
 
     #测试固件
     def setUp(self):
