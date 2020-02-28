@@ -45,7 +45,6 @@ def forge():
 @click.option('--password',prompt=True,help='密码',confirmation_prompt=True)
 def admin(username,password):
     db.create_all()
-
     user = User.query.first()
     if user is not None:
         click.echo('更新用户')
